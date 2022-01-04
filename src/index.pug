@@ -1,0 +1,16 @@
+extends dev/layout/main_page
+block variables
+  - var pageTitle = 'My Resume'
+
+  - var navLinks = [{link: "promo", name: "Main"}, {link: "about", name: "About"}, {link: "skills", name: "Skills"}, {link: "portfolio", name: "Portfolio"}, {link: "contacts", name: "Contacts"}]
+
+  - var profile = {name: "Павел Хохлов", img: "./images/portrait.jpg", about: "Frontend - разработчик", age: 44, text: "Я веб-разработчик из города Мытищи, несмотря на то, что у меня есть высшее образование и квалификация радио-инженера, программирование стало моим основным увлечением, спасибо Яндекс Практикум за полученный опыт и знания. Моя цель - создавать профессиональные сайты и приложения."}
+
+  - var portfolioCards = [ {name: "Adaptive site", about: "This app is one of my first projects in Yandex Practicum. The idea was to create an adaptive site for desktops, pads and phones. I implemented flex and grid styles and created some points of breaking design.", tech: "HTML, CSS, FLEX, GRID, Adaptive", pathGit: `https://github.com/Pavel-Khokhlov/russian-travel`, pathGhPages: `https://pavel-khokhlov.github.io/russian-travel`}, {name: "One page App", about: "This application is named Mesto. I practiced to configurate REST API to provide connection between UI and server. I created some API requests to update profile information and requests to add new places, set like / dislike and delete my cards. I implemented JavaScript in this project for the first time. It was difficult, but I got it right", tech: "HTML, CSS, FLEX, GRID, Adaptive, Popup, JS, REST API", pathGit: `https://github.com/Pavel-Khokhlov/mesto-react`,pathGhPages: `https://pavel-khokhlov.github.io/mesto-react`}, {name: "My practice project", about: "Для закрепления пройденного материала, решил заняться pet проектом. Сделал сайт визитку.", tech: "HTML, CSS, JS, FLEX, GRID, Adaptive, Popup", pathGit: `https://github.com/Pavel-Khokhlov/irinayuzifovich`, pathGhPages: `https://pavel-khokhlov.github.io/irinayuzifovich`}, {name: "Bushe test project", tech: "HTML, CSS, FLEX, GRID, Popup, ReactJS, Redux-Toolkit", pathGit: `https://github.com/Pavel-Khokhlov/bushe-react`, pathGhPages: `https://pavel-khokhlov.github.io/bushe-react`}, {name: "Amigoweb test project", tech: "HTML, CSS, FLEX, GRID, Popup, ReactJS, Redux-Toolkit, UI/UX", pathGit: `https://github.com/Pavel-Khokhlov/amigoweb-react`, pathGhPages: `https://pavel-khokhlov.github.io/amigoweb-react`}, {name: "To-do my project", tech: "HTML, CSS, ReactJS, Redux-Toolkit, TypeScript, Bootstrap", pathGit: `https://github.com/Pavel-Khokhlov/todo-react-redux-ts`, pathGhPages: null}, {name: "VooDoo test project", tech: "HTML, CSS, SASS, ReactJS, Redux-Toolkit, Bootstrap", pathGit: `https://github.com/Pavel-Khokhlov/voodoo-react`, pathGhPages: `https://pavel-khokhlov.github.io/voodoo-react`} ]
+
+block content
+  include dev/modules/header/header
+  include dev/modules/main/main
+  include dev/modules/footer/footer
+  include dev/modules/popupMenu/popupMenu
+  

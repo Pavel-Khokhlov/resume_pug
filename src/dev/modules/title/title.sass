@@ -1,0 +1,60 @@
+.title
+  position: relative
+  margin: 0
+  color: $primary-color
+  font:
+    size: min(25px, 5vw)
+    family: UniNeueLight
+    weight: 200
+  &__promo
+    position: relative
+    margin-top: min(210px, 50vw)
+    font-size: min(70px, 20vw)
+    opacity: 0
+    filter: blur(6px)
+    transform: scale(6)
+    transition: $animation-transition
+  &__promo._active
+    filter: none
+    transform: scale(1)
+    opacity: 1
+
+  &__main
+    position: relative
+    top: 0
+    left: 100%
+    opacity: 0
+    font-size: min(35px, 6vw)
+    margin-bottom: min(80px, 15vw)
+    transition: $animation-transition
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      bottom: -10px
+      left: 0
+      width: 100%
+      height: 1px
+      background: linear-gradient(to right, rgba($third-color, 1),rgba($third-color, 0))
+  &__main._active
+    left: 0
+    opacity: 1
+
+.subtitle
+  &__promo
+    position: relative
+    top: 100px
+    opacity: 0
+    font-size: min(50px, 7vw)
+    color: rgba($secondary-color, 0.6)
+    transition: $animation-transition
+    &._active
+      top: 0
+      opacity: 1
+
+
+  &__main
+    font-size: min(25px, 5vw)
+    margin-bottom: min(30px, 5vw)
+    text-align: center
+    color: rgba($primary-color, 0.6)

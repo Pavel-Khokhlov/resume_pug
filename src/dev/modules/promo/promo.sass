@@ -1,0 +1,15 @@
+.promo
+  min-height: 100vh
+  @include column
+  justify-content: space-between
+  padding-bottom: min(50px, 10vw)
+
+  &__text
+    @include column
+    gap: 40px
+
+  &__line
+    width: 30vw
+    min-height: 1px
+    border: none
+    background: $third-color

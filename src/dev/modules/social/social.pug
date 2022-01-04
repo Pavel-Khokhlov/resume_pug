@@ -1,0 +1,7 @@
+- var contactLinks = [{link: "tel:+79852515089", name: "+79852515089", img: "./images/phone.png"}, {link: "https://api.whatsapp.com/send/?phone=79852515089", name: "WhatsApp", img: "./images/wa.png"}, {link: "tg://resolve?domain=@pavel_khokhlov_09", name: "Telegram", img: "./images/telegram.png"}, {link: "https://linkedin.com", name: "LinkedIn", img: "./images/in.png"}, {link: "https://github.com/Pavel-Khokhlov", name: "GitHub", img: "./images/git.png"}]
+
+ul.social
+  for i in contactLinks
+    li
+      a(href= i.link, target="_blank").social__link
+        img(src= i.img, alt= i.name).social__icon

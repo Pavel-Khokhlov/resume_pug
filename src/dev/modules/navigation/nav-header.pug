@@ -1,0 +1,5 @@
+nav.nav-header
+  ul.nav-header__list
+    for i in navLinks
+      li
+        a(href="#", name= i.link).nav__link.nav-header__link=i.name

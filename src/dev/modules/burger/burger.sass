@@ -1,0 +1,43 @@
+.burger
+  padding: 0
+  margin: 0
+  display: block
+  background: transparent
+  border: none
+  width: 25px
+  height: 18px
+  position: relative
+  outline: none
+  opacity: 1
+  cursor: pointer
+  transition: $app-transition
+  &::before, &::after, &__span
+    content: ''
+    position: absolute
+    left: 0
+    width: 100%
+    height: 1px
+    background: $primary-color
+    border-radius: 1px
+    transition: $app-transition
+  &::before
+    top: 0
+  &__span
+    top: 8px
+  &::after
+    bottom: 0
+  &:hover
+    opacity: 0.5
+  @media screen and (min-width: 767px)
+    display: none
+  &._active &__span
+    opacity: 0
+  &._active
+    &::before
+      top: 50%
+      transform: rotate(-45deg) translate(0, -50%)
+    &::after
+      bottom: 50%
+      transform: rotate(45deg) translate(0, 50%)
+
+      

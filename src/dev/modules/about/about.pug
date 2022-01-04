@@ -1,0 +1,21 @@
+- var education = ["06.2020 - 06.2021 Yandex Practicum, Web-Development Professional Training Course 560 hours.", "03.2016 - 10.2016 Moscow, Academy of Photography, Design and Multymedia. The program of professional education - Photograph.", "02.2008 - 05.2008 Yaroslav-the-Wise Novgorod State University, Netvork academy CISCO, course - CCNA 168 hours.", "07.1994 - 02.2000 Vladivostok, Far Easten State Marine Academy, Qualification - Radio-Engineer, speciality - Maintenance of transport radio equipment."]
+
+- var experience = [{date: "02.2021 - present", company: "I am involved in a pet project. My best friend is a fashion designer and she is planning to create a modern site. Last February I already passed a half way in Yandex Practicum. I wanted to pactice my new skills. At fist we decided to create a simple landing page. Now it must be a good online-shop. I'm planning to implement React for frontend and Node and Express for backend."}, {date: "06.2020 - 06.2021", company: "I enjoyed studing at Yandex Practicum. That year was like one day. I got a lot of usefull information. The cours was divided into some sprints. Every sprint was like a small voyage. "}, {date: "05.2018 - 07.2018", company: "I worked at FIFA 2018 World Championship as an IT Engineer. Our team provided access to internet services via SCS, Wi-Fi, etc."}, {date: "11.2016 - 04.2018", company: "I was involved in commissionig of Yamal LNG as Telecom Supervosor. We inspected the correct installation of different telecom equipment on site."}, {date: "10.2007 - 02.2015", company: "I worked in Sakhalin II project as a Telecom Engineer. I was responsible for all telecomm and IT equipment on the Lun-A platform. It was my first acquaintance with Web development at that time. I got some knoledge in HTML, CSS and created my first application - Photography portfolio."}]
+
+section(id="about").section.about
+  h3.title.title__main.animation_item.stop_animation About
+  h4.title.subtitle__main Education
+  article.about__block
+    .about__education
+      .about__text
+        for i in education
+          p.paragraph.paragraph__main.about__paragraph= i
+      img(src= profile.img).about__image.animation_item.stop_animation
+    .about__experience
+      h4.title.subtitle__main Experience
+      p.paragraph.paragraph__main.about__paragraph Я родился в Приморском крае. Получил высшее образование и долгое время работал инженером по телекоммуникациям и предоставлял IT поддержку пользователям на нефтегазовом проекте. Впервые познакомился с HTML, CSS и JS в 2012 году. Написал свой первый сайт и загрузил его на хостинг. После переезда в Москву увлекся фотографией. А в 2020 году решил упорядочить свои знания в веб разработке и прошел курс  Фронтенд в Яндекс-Практикум. Полученные знания готов применять на практике и в проектах. Сейчас изучаю дополнительные технологии, пытаюсь расширить багаж знаний.
+      div.about__date
+        for i in experience
+          article.about__company
+            h3.title.subtitle__main.about__subtitle.animation_item= i.date 
+            p.paragraph.paragraph__main.about__paragraph= i.company

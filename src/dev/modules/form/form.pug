@@ -1,0 +1,17 @@
+form.form.form__contact(method="post")
+  h4.title.subtitle__main Contact me
+  .form__field
+    label.form__label(for="name") Name:
+    input.input.form__input.form__input_name(type="text" id="name" name="name" placeholder="Enter your name..." autocomplete="off")
+    p.form__error
+  .form__field
+    label.form__label(for="phone") Phone:
+    input.input.form__input.form__input_phone(type="number" id="phone" name="phone" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your phone..." autocomplete="off")
+    p.form__error
+  .form__field
+    label.form__label(for="textfield") Message:
+    textarea.input.form__textarea.form__input_message(type="text" id="textfield" name="message" rows="5" placeholder="Enter your message...")
+    p.form__error
+  .form__buttons
+    button.button.button__submit(type="submit") Submit
+    button.button.button__reset(type="button") Reset

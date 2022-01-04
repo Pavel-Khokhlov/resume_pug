@@ -1,0 +1,48 @@
+@import ./variables
+@import ./mixins
+@import ./modules/title/title
+@import ./modules/paragraph/paragraph
+@import ./modules/header/header
+@import ./modules/burger/burger
+@import ./modules/button/button
+@import ./modules/main/main
+@import ./modules/promo/promo
+@import ./modules/social/social
+@import ./modules/about/about
+@import ./modules/skills/skills
+@import ./modules/portfolio/portfolio
+@import ./modules/contacts/contacts
+@import ./modules/form/form
+@import ./modules/footer/footer
+@import ./modules/popupMenu/popupMenu
+
+html
+  scroll-behavior: smooth
+
+body
+  position: relative
+  margin: 0
+  padding: 0
+  color: rgba($primary-color, 0.8)
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  box-sizing: border-box
+
+code
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+
+.root
+  margin: 0
+  padding: 0
+  background: $primary-bg
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.section
+  width: 100%
+  padding-left: min(50px, 3vw)
+  padding-right: min(50px, 3vw)
+  padding-bottom: min(50px, 10vw)
+  box-sizing: border-box

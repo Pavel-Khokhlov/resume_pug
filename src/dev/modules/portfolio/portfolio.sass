@@ -1,0 +1,67 @@
+@import ../card/card
+  
+.portfolio
+  padding-top: min(90px, 17vw)
+  &__info
+    width: min(900px, 80vw)
+    margin: 0 auto
+    display: grid
+    grid-template-columns: auto 300px
+    gap: min(100px, 8vw)
+    margin-bottom: min(100px, 16vw)
+    align-items: center
+    @media screen and (max-width: 767px)
+      display: flex
+      flex-direction: column
+  &__paragraph
+    width: min(700px, 80vw)
+    margin: 0 auto
+    margin-bottom: min(30px, 6vw)
+    text-align: justify
+
+  &__cards
+    list-style: none
+    padding: 0
+    margin: 0
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: min(40px, 6vw)
+    @media screen and (max-width: 767px)
+      display: flex
+      flex-direction: column
+
+    &._active .card
+      top: 0
+      opacity: 1
+      transition: $animation-transition
+      &:nth-child(1)
+        transition: $animation-transition 0s
+      &:nth-child(2)
+        transition: $animation-transition 0s
+      &:nth-child(3)
+        transition: $animation-transition 0.2s
+      &:nth-child(4)
+        transition: $animation-transition 0.2s
+      &:nth-child(5)
+        transition: $animation-transition 0.4s
+      &:nth-child(6)
+        transition: $animation-transition 0.4s
+      &:nth-child(7)
+        transition: $animation-transition 0.6s
+      @media screen and (max-width: 767px)
+        transform: translate(0px, 0px)
+        &:nth-child(1)
+          transition: $animation-transition 0s
+        &:nth-child(2)
+          transition: $animation-transition 0.2s
+        &:nth-child(3)
+          transition: $animation-transition 0.4s
+        &:nth-child(4)
+          transition: $animation-transition 0.6s
+        &:nth-child(5)
+          transition: $animation-transition 0.8s
+        &:nth-child(6)
+          transition: $animation-transition 1s
+        &:nth-child(7)
+          transition: $animation-transition 1.2s
+        

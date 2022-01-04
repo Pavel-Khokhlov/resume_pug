@@ -1,0 +1,5 @@
+nav.nav-footer
+  ul.nav-footer__list
+    for i in navLinks
+      li
+        a(href="#", name= i.link).nav__link.nav-footer__link=i.name

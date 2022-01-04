@@ -1,0 +1,15 @@
+- var skills = ["HTML", "PUG", "CSS", "SASS", "JS", "TS", "REACT", "REDUX", "WEBPACK", "BABEL", "NODE.JS", "EXPRESS"]
+
+- var tools = ["FIGMA", "PPIXEL", "GITHUB", "BITBUCKET", "VS CODE", "POSTMAN", "MONGO"]
+
+section(id="skills").section.skills
+  h3.title.title__main.animation_item.stop_animation Skills
+  .skills__block
+    h4.title.subtitle__main.skills__subtitle Technologies
+    .skills__items
+      for i in skills
+        p.skills__item= i
+    h4.title.subtitle__main.skills__subtitle Tools
+    .skills__items
+      for i in tools
+        p.skills__item= i

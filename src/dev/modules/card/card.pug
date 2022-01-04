@@ -1,0 +1,14 @@
+for i in portfolioCards
+  article.card
+    h3.title.card__title= i.name
+    p.paragraph.paragraph__main.card__about= i.about
+    p.card__techs= i.tech
+    ul.card__links
+      if i.pathGit !== null
+        li 
+          a.card__link(href=i.pathGit target="_blank")
+            img(src="./images/git2.png" alt="logo git").card__image
+      if i.pathGhPages !== null
+        li 
+          a.card__link(href=i.pathGhPages target="_blank")
+            img(src="./images/web.png" alt="logo web").card__image

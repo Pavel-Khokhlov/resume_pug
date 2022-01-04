@@ -1,0 +1,71 @@
+@keyframes logo
+  0%
+    transform: rotate(-45deg)
+  50%
+    transform: rotate(-135deg)
+  100%
+    transform: rotate(-225deg)
+
+@keyframes logo__item-1
+  0%
+    transform: translate(0)
+  50%
+    transform: translate(-10px, 0)
+    border-color: #EE4D68
+  100%
+    transform: translate(0)
+
+@keyframes logo__item-2
+  0%
+    transform: translate(0)
+  50%
+    transform: translate(10px, 0)
+    border-color: $primary-color
+  100%
+    transform: translate(0)
+
+@keyframes logo__item-3
+  0%
+    transform: translate(0)
+  50%
+    transform: translate(0, -10px)
+    border-color:#FF9900
+  100%
+    transform: translate(0)
+
+@keyframes logo__item-4
+  0%
+    transform: translate(0)
+  50%
+    transform: translate(0, 10px)
+    border-color:#00E4F6
+  100%
+    transform: translate(0)
+
+.logo
+  box-sizing: border-box
+  width: 10px
+  height: 10px
+  position: relative
+  animation: logo 2s infinite ease-in-out
+
+  .logo__item
+    box-sizing: border-box
+    width: 10px
+    height: 10px
+    position: absolute
+    left: 0
+    top: 0
+    border: 1px solid $primary-color
+
+    &:nth-child(1)
+      animation: logo__item-1 2s ease-in-out infinite
+
+    &:nth-child(2)
+      animation: logo__item-2 2s ease-in-out infinite
+
+    &:nth-child(3)
+      animation: logo__item-3 2s ease-in-out infinite
+
+    &:nth-child(4)
+      animation: logo__item-4 2s ease-in-out infinite
