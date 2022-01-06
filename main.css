@@ -70,6 +70,7 @@
 .paragraph__main {
   text-indent: min(20px, 5vw);
   font-size: min(16px, 4vw);
+  text-align: justify;
 }
 
 @keyframes logo {
@@ -489,9 +490,6 @@
     width: min(250px, 60vw);
   }
 }
-.about__paragraph {
-  text-align: justify;
-}
 .about__subtitle {
   margin: 0;
   position: relative;
@@ -577,9 +575,6 @@
 .card__title {
   text-align: center;
   margin-bottom: min(20px, 4vw);
-}
-.card__about {
-  text-align: justify;
 }
 .card__links {
   margin: 0;
