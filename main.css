@@ -535,7 +535,7 @@
 }
 .skills__items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: min(30px, 6vw);
   width: min(680px, 85vw);
   margin: 0 auto;
