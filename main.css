@@ -2,17 +2,16 @@
   position: relative;
   margin: 0;
   color: white;
-  font-size: min(25px, 5vw);
   font-family: UniNeueLight;
   font-weight: 200;
 }
 .title__promo {
   position: relative;
   margin-top: min(210px, 50vw);
-  font-size: min(70px, 20vw);
+  font-size: min(70px, 12vw);
   opacity: 0;
   filter: blur(6px);
-  transform: scale(6);
+  transform: scale(5);
   transition: all 1s ease;
 }
 .title__promo._active {
@@ -69,7 +68,8 @@
   line-height: 1.2;
 }
 .paragraph__main {
-  text-indent: 20px;
+  text-indent: min(20px, 5vw);
+  font-size: min(16px, 4vw);
 }
 
 @keyframes logo {
@@ -848,8 +848,8 @@ code {
 
 .section {
   width: 100%;
-  padding-left: min(50px, 3vw);
-  padding-right: min(50px, 3vw);
+  padding-left: min(50px, 6vw);
+  padding-right: min(50px, 6vw);
   padding-bottom: min(50px, 10vw);
   box-sizing: border-box;
 }
