@@ -1,9 +1,11 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
 .title {
   position: relative;
   margin: 0;
   color: white;
-  font-family: UniNeueLight;
-  font-weight: 200;
+  font-family: Montserrat;
+  font-weight: 300;
 }
 .title__promo {
   position: relative;
@@ -63,6 +65,7 @@
 }
 
 .paragraph {
+  font-family: Montserrat;
   margin: 0;
   padding: 0;
   line-height: 1.2;
@@ -476,14 +479,14 @@
 }
 .about__image {
   position: relative;
-  scale: 0.5;
+  transform: scale(0.5);
   width: 100%;
   border-radius: 10px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.04), 4px 4px 8px rgba(0, 0, 0, 0.06), 6px 6px 15px rgba(0, 0, 0, 0.08), 7px 7px 25px rgba(0, 0, 0, 0.1);
   transition: all 1s ease;
 }
 .about__image._active {
-  scale: 1;
+  transform: scale(1);
 }
 @media screen and (max-width: 767px) {
   .about__image {
@@ -561,15 +564,21 @@
   top: 40px;
   opacity: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: min(20px, 5vw);
   border-radius: 10px;
   border: none;
   box-sizing: border-box;
   box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.3), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.46), 3.8px 5.3px 7px rgba(0, 0, 0, 0.63), -0.5px -0.7px 1px rgba(116, 255, 255, 0.08), -1.6px -2.2px 2.9px rgba(116, 255, 255, 0.09), -3.8px -5.3px 7px rgba(116, 255, 255, 0.1), inset 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), inset 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), inset 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), inset -0.5px -0.7px 1px rgba(116, 255, 255, 0.08), inset -1.6px -2.2px 2.9px rgba(116, 255, 255, 0.09), inset -3.8px -5.3px 7px rgba(116, 255, 255, 0.1);
+  transition: all 1s ease;
 }
 @media screen and (max-width: 767px) {
   .card {
-    transform: translate(-120%, 0px);
+    top: 0;
+    opacity: 0;
+    transform: translate(-120%, 0);
   }
 }
 .card__title {
@@ -593,6 +602,16 @@
 }
 .card__link:hover {
   opacity: 1;
+}
+.card._active {
+  top: 0;
+  opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .card._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 .portfolio {
@@ -631,58 +650,6 @@
   .portfolio__cards {
     display: flex;
     flex-direction: column;
-  }
-}
-.portfolio__cards._active .card {
-  top: 0;
-  opacity: 1;
-  transition: all 1s ease;
-}
-.portfolio__cards._active .card:nth-child(1) {
-  transition: all 1s ease 0s;
-}
-.portfolio__cards._active .card:nth-child(2) {
-  transition: all 1s ease 0s;
-}
-.portfolio__cards._active .card:nth-child(3) {
-  transition: all 1s ease 0.2s;
-}
-.portfolio__cards._active .card:nth-child(4) {
-  transition: all 1s ease 0.2s;
-}
-.portfolio__cards._active .card:nth-child(5) {
-  transition: all 1s ease 0.4s;
-}
-.portfolio__cards._active .card:nth-child(6) {
-  transition: all 1s ease 0.4s;
-}
-.portfolio__cards._active .card:nth-child(7) {
-  transition: all 1s ease 0.6s;
-}
-@media screen and (max-width: 767px) {
-  .portfolio__cards._active .card {
-    transform: translate(0px, 0px);
-  }
-  .portfolio__cards._active .card:nth-child(1) {
-    transition: all 1s ease 0s;
-  }
-  .portfolio__cards._active .card:nth-child(2) {
-    transition: all 1s ease 0.2s;
-  }
-  .portfolio__cards._active .card:nth-child(3) {
-    transition: all 1s ease 0.4s;
-  }
-  .portfolio__cards._active .card:nth-child(4) {
-    transition: all 1s ease 0.6s;
-  }
-  .portfolio__cards._active .card:nth-child(5) {
-    transition: all 1s ease 0.8s;
-  }
-  .portfolio__cards._active .card:nth-child(6) {
-    transition: all 1s ease 1s;
-  }
-  .portfolio__cards._active .card:nth-child(7) {
-    transition: all 1s ease 1.2s;
   }
 }
 
