@@ -82,7 +82,7 @@
 }
 .paragraph__main {
   text-indent: min(20px, 5vw);
-  font-size: min(16px, 4vw);
+  font-size: min(16px, 3vw);
   text-align: justify;
 }
 
@@ -281,14 +281,15 @@
   gap: min(50px, 14vw);
 }
 .nav-menu__link {
-  padding: 6px 20px;
+  width: min(150px, 30vw);
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   transition: all 0.5s ease;
   border-radius: 25px;
-  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
+  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.05), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.06), -3.8px -5.3px 7px rgba(255, 255, 255, 0.07), inset 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), inset 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), inset 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), inset -0.5px -0.7px 1px rgba(255, 255, 255, 0.05), inset -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.06), inset -3.8px -5.3px 7px rgba(255, 255, 255, 0.07);
 }
 .nav-menu__link:hover {
   color: #74ffff;
@@ -399,13 +400,12 @@
   color: #ffae4b;
 }
 .button__enter {
-  width: min(200px, 40vw);
-  height: min(40px, 10vw);
+  width: min(150px, 30vw);
+  height: min(30px, 8vw);
   color: white;
   border-radius: calc(min(200px, 40vw) / 3);
   font-size: min(20px, 5vw);
   line-height: 1.2;
-  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
 }
 .button__enter:hover {
   color: #ffae4b;
@@ -558,7 +558,7 @@
 .skills__item {
   color: rgba(255, 255, 255, 0.3);
   display: block;
-  font-size: min(14px, 4vw);
+  font-size: min(14px, 3.5vw);
   line-height: 50px;
   border-radius: 25px;
   text-align: center;
@@ -785,7 +785,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: min(100px, 25vw);
+  gap: min(80px, 15vw);
 }
 .popup._active {
   display: flex;
