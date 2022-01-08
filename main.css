@@ -46,7 +46,7 @@
   bottom: -10px;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
   background: linear-gradient(to right, #ffae4b, rgba(255, 174, 75, 0));
 }
@@ -533,7 +533,7 @@
   margin-top: min(40px, 10vw);
   display: flex;
   flex-direction: column;
-  gap: min(40px, 5vw);
+  gap: min(40px, 10vw);
 }
 
 .skills {
@@ -573,7 +573,7 @@
 
 .card {
   position: relative;
-  top: 40px;
+  top: 100px;
   opacity: 0;
   width: 100%;
   display: flex;
@@ -656,7 +656,7 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: min(40px, 6vw);
+  gap: min(40px, 10vw);
 }
 @media screen and (max-width: 767px) {
   .portfolio__cards {
