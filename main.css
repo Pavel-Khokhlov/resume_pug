@@ -47,6 +47,7 @@
   left: 0;
   width: 100%;
   height: 1px;
+  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
   background: linear-gradient(to right, #ffae4b, rgba(255, 174, 75, 0));
 }
 .title__main._active {
@@ -440,6 +441,7 @@
   min-height: 1px;
   border: none;
   background: #ffae4b;
+  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
 }
 
 .social {
