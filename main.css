@@ -1,5 +1,14 @@
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dev/index.sass ***!
+  \*************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap);
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dev/index.sass (1) ***!
+  \*****************************************************************************************************************/
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dev/index.sass (2) ***!
+  \*****************************************************************************************************************/
 .title {
   position: relative;
   margin: 0;
@@ -10,10 +19,10 @@
 .title__promo {
   position: relative;
   margin-top: min(210px, 50vw);
-  font-size: min(70px, 12vw);
+  font-size: min(70px, 10vw);
   opacity: 0;
   filter: blur(6px);
-  transform: scale(5);
+  transform: scale(0.2);
   transition: all 1s ease;
 }
 .title__promo._active {
@@ -395,7 +404,7 @@
   border-radius: calc(min(200px, 40vw) / 3);
   font-size: min(20px, 5vw);
   line-height: 1.2;
-  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.3), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.46), 3.8px 5.3px 7px rgba(0, 0, 0, 0.63), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
+  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
 }
 .button__enter:hover {
   color: #ffae4b;
