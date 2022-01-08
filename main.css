@@ -281,14 +281,14 @@
   gap: min(50px, 14vw);
 }
 .nav-menu__link {
-  padding: 10px 20px;
+  padding: 6px 20px;
   text-decoration: none;
-  font-size: min(20px, 5vw);
+  font-size: 4vw;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.5s ease;
   border-radius: 25px;
-  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.3), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.46), 3.8px 5.3px 7px rgba(0, 0, 0, 0.63), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06), inset 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), inset 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), inset 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), inset -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), inset -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), inset -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
+  box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06);
 }
 .nav-menu__link:hover {
   color: #74ffff;
