@@ -3,16 +3,15 @@
   margin: 0
   color: $primary-color
   font:
-    size: min(25px, 5vw)
-    family: UniNeueLight
-    weight: 200
+    family: Montserrat
+    weight: 300
   &__promo
     position: relative
     margin-top: min(210px, 50vw)
-    font-size: min(70px, 20vw)
+    font-size: min((calc($text-size-title-base) * 14), 10vw)
     opacity: 0
     filter: blur(6px)
-    transform: scale(6)
+    transform: scale(0.2)
     transition: $animation-transition
   &__promo._active
     filter: none
@@ -34,7 +33,8 @@
       bottom: -10px
       left: 0
       width: 100%
-      height: 1px
+      height: 2px
+      box-shadow: shadow_button($primary-black, $primary-color)
       background: linear-gradient(to right, rgba($third-color, 1),rgba($third-color, 0))
   &__main._active
     left: 0

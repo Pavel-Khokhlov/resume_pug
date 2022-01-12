@@ -29,14 +29,14 @@
     line-height: min(40px, 10vw)
     border-radius: 5px
     margin: 0
-    box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.3), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.46), 3.8px 5.3px 7px rgba(0, 0, 0, 0.63), -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), -3.8px -5.3px 7px rgba(255, 255, 255, 0.06), inset 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), inset 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), inset 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), inset -0.5px -0.7px 1px rgba(255, 255, 255, 0.04), inset -1.6px -2.2px 2.9px rgba(255, 255, 255, 0.05), inset -3.8px -5.3px 7px rgba(255, 255, 255, 0.06)
+    box-shadow: shadow_box($primary_black, $primary_color)
     transition: $app-transition
     &::placeholder
       color: rgba($primary-color, 0.3)
       font-size: min(18px, 5vw)
       transition: $app-transition
     &:focus
-      box-shadow: 0.5px 0.7px 1px rgba(0, 0, 0, 0.3), 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.46), 3.8px 5.3px 7px rgba(0, 0, 0, 0.63), -0.5px -0.7px 1px rgba($secondary-color, 0.08), -1.6px -2.2px 2.9px rgba($secondary-color, 0.09), -3.8px -5.3px 7px rgba($secondary-color, 0.1), inset 0.5px 0.7px 1px rgba(0, 0, 0, 0.2), inset 1.6px 2.2px 2.9px rgba(0, 0, 0, 0.3), inset 3.8px 5.3px 7px rgba(0, 0, 0, 0.5), inset -0.5px -0.7px 1px rgba($secondary-color, 0.08), inset -1.6px -2.2px 2.9px rgba($secondary-color, 0.09), inset -3.8px -5.3px 7px rgba($secondary-color, 0.1)
+      box-shadow: shadow_box($primary_black, $secondary_color)
       // hide placeholder
       &::-webkit-input-placeholder
         opacity: 0

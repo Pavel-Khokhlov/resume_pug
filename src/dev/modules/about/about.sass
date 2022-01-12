@@ -18,18 +18,15 @@
     gap: min(20px, 4vw)
   &__image
     position: relative
-    scale: 0.5
+    transform: scale(0.5)
     width: 100%
     border-radius: 10px
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.04), 4px 4px 8px rgba(0, 0, 0, 0.06), 6px 6px 15px rgba(0, 0, 0, 0.08), 7px 7px 25px rgba(0, 0, 0, 0.1)
     transition: $animation-transition
     &._active
-      scale: 1
+      transform: scale(1)
     @media screen and (max-width: 767px)
       width: min(250px, 60vw)
-
-  &__paragraph
-    text-align: justify
 
   &__subtitle
     margin: 0
@@ -43,6 +40,7 @@
   &__company
     border-radius: 10px
     padding: 10px 15px
+    border: 1px solid rgba($primary-color, 0.1)
     background: rgba($primary-color, 0.025)
     display: grid
     grid-template-columns: 1fr 2fr
@@ -55,5 +53,5 @@
     margin-top: min(40px, 10vw)
     display: flex
     flex-direction: column
-    gap: min(40px, 5vw)
+    gap: min(40px, 10vw)
   

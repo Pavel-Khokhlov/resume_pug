@@ -3,20 +3,31 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: "none",
+  mode: 'development',
   entry: "./src/index.js",
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      inject: 'body', // put script to body lacation
+      scriptLoading: "blocking", // defer off
     }),
     new MiniCssExtractPlugin(),
   ],
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "",
   },
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader",],
+      },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -27,14 +38,6 @@ module.exports = {
             plugins: ['@babel/plugin-proposal-object-rest-spread']
           }
         }
-      },
-      {
-        test: /\.html$/i,
-        use: ["html-loader"],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader",],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

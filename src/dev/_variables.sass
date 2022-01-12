@@ -1,0 +1,23 @@
+$primary-black: rgba(#000000, 1)
+$primary-color: rgba(#ffffff, 1)
+$secondary-color: rgba(#74ffff, 1)
+$third-color: rgba(#ffae4b, 1)
+$error-color: rgba(#ff0000, 1)
+$primary-bg: rgba(#202124, 1)
+$margin-centerX: 0 auto
+
+$button-width: min(200px, 40vw)
+$button-height: min(40px, 10vw)
+
+$app-transition: all 0.5s ease
+$animation-transition: all 1s ease
+
+$text-size-title-base: 5px
+$text-size-paragraph-main: min(16px, 3vw)
+$text-indent-paragraph-main: min(20px, 5vw)
+
+@function shadow_button($color_1, $color_2)
+  @return 0.5px 0.7px 1px rgba($color_1, 0.2), 1.6px 2.2px 2.9px rgba($color_1, 0.3), 3.8px 5.3px 7px rgba($color_1, 0.5), -0.5px -0.7px 1px rgba($color_2, 0.04), -1.6px -2.2px 2.9px rgba($color_2, 0.05), -3.8px -5.3px 7px rgba($color_2, 0.06)
+
+@function shadow_box($color_1, $color_2)
+  @return 0.5px 0.7px 1px rgba($color_1, 0.2), 1.6px 2.2px 2.9px rgba($color_1, 0.3), 3.8px 5.3px 7px rgba($color_1, 0.5), -0.5px -0.7px 1px rgba($color_2, 0.05), -1.6px -2.2px 2.9px rgba($color_2, 0.06), -3.8px -5.3px 7px rgba($color_2, 0.07), inset 0.5px 0.7px 1px rgba($color_1, 0.2), inset 1.6px 2.2px 2.9px rgba($color_1, 0.3), inset 3.8px 5.3px 7px rgba($color_1, 0.5), inset -0.5px -0.7px 1px rgba($color_2, 0.05), inset -1.6px -2.2px 2.9px rgba($color_2, 0.06), inset -3.8px -5.3px 7px rgba($color_2, 0.07)

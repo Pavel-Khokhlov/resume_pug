@@ -13,7 +13,7 @@ section(id="about").section.about
       img(src= profile.img).about__image.animation_item.stop_animation
     .about__experience
       h4.title.subtitle__main Experience
-      p.paragraph.paragraph__main.about__paragraph Я родился в Приморском крае. Получил высшее образование и долгое время работал инженером по телекоммуникациям и предоставлял IT поддержку пользователям на нефтегазовом проекте. Впервые познакомился с HTML, CSS и JS в 2012 году. Написал свой первый сайт и загрузил его на хостинг. После переезда в Москву увлекся фотографией. А в 2020 году решил упорядочить свои знания в веб разработке и прошел курс  Фронтенд в Яндекс-Практикум. Полученные знания готов применять на практике и в проектах. Сейчас изучаю дополнительные технологии, пытаюсь расширить багаж знаний.
+      p.paragraph.paragraph__main.about__paragraph= profile.text
       div.about__date
         for i in experience
           article.about__company

@@ -1,13 +1,13 @@
 ***THIS IS MY PORTFOLIO APP***
 
-* [Link to the СV](https://pavel-khokhlov.github.io/resume_pug/)
+* [Link to My СV](https://pavel-khokhlov.github.io/resume_pug/)
 
-*About*
+**About**
 I decided to create my portfolio application and implement new technologies as PUG & SASS. This project helps me to practice initialize setting of WEBPACK.
 
-*Technologies*
+**Technologies**
 PUG, SASS, WEBPACK
 
-*Future*
+**Future**
 Create a function to download CV
 Do Russian version of CV
