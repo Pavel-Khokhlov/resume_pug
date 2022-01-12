@@ -1,4 +1,4 @@
-***THIS IS MY PORTFOLIO APP***
+### THIS IS MY PORTFOLIO APP
 
 * [Link to My СV](https://pavel-khokhlov.github.io/resume_pug/)
 
@@ -12,5 +12,5 @@ PUG, SASS, WEBPACK
 
 **Future**
 
-Create a function to download CV
-Do Russian version of CV
+1. Create a function to download CV
+2. Do Russian version of CV
