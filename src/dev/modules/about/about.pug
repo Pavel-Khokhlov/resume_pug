@@ -16,6 +16,6 @@ section(id="about").section.about
       p.paragraph.paragraph__main.about__paragraph= profile.text
       div.about__date
         for i in experience
-          article.about__company
-            h3.title.subtitle__main.about__subtitle.animation_item= i.date 
+          article.about__company.animation_item.stop_animation
+            h3.title.subtitle__main.about__subtitle= i.date 
             p.paragraph.paragraph__main.about__paragraph= i.company

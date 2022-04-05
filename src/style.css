@@ -512,11 +512,8 @@
   margin: 0;
   position: relative;
   text-align: start;
-  font-size: 5px;
-  transition: all 1s ease;
-}
-.about__subtitle._active {
   font-size: min(18px, 5vw);
+  transition: all 1s ease;
 }
 .about__company {
   border-radius: 10px;
@@ -525,6 +522,8 @@
   background: rgba(255, 255, 255, 0.025);
   display: grid;
   grid-template-columns: 1fr 2fr;
+  opacity: 0;
+  transition: all 0.5s ease 0.5s;
 }
 @media screen and (max-width: 767px) {
   .about__company {
@@ -532,6 +531,9 @@
     flex-direction: column;
     gap: 10px;
   }
+}
+.about__company._active {
+  opacity: 1;
 }
 .about__date {
   margin-top: min(40px, 10vw);

@@ -32,11 +32,9 @@
     margin: 0
     position: relative
     text-align: start
-    font-size: 5px
+    font-size: min(18px, 5vw)
     transition: $animation-transition
-    &._active
-      font-size: min(18px, 5vw)
-
+      
   &__company
     border-radius: 10px
     padding: 10px 15px
@@ -44,10 +42,14 @@
     background: rgba($primary-color, 0.025)
     display: grid
     grid-template-columns: 1fr 2fr
+    opacity: 0
+    transition: $app-transition 0.5s
     @media screen and (max-width: 767px)
       display: flex
       flex-direction: column
       gap: 10px
+    &._active
+      opacity: 1
   
   &__date
     margin-top: min(40px, 10vw)
