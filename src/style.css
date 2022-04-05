@@ -592,7 +592,6 @@
 }
 @media screen and (max-width: 767px) {
   .card {
-    top: 0;
     opacity: 0;
     transform: translate(-120%, 0);
   }
@@ -622,12 +621,6 @@
 .card._active {
   transform: translate(0, 0);
   opacity: 1;
-}
-@media screen and (max-width: 767px) {
-  .card._active {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
 }
 
 .portfolio {
