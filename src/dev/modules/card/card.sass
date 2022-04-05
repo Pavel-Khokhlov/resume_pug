@@ -1,6 +1,6 @@
 .card
   position: relative
-  top: 50px
+  transform: translate(0, 50%)
   opacity: 0
   width: 100%
   display: flex
@@ -35,7 +35,7 @@
       opacity: 1
 
   &._active
-    top: 0
+    transform: translate(0, 0)
     opacity: 1
     @media screen and (max-width: 767px)
       transform: translate(0, 0)
