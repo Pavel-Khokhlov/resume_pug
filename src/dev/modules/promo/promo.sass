@@ -14,3 +14,14 @@
     border: none
     background: $third-color
     box-shadow: shadow_button($primary-black, $primary-color)
+
+  &__link
+    text-decoration: none
+    color: $primary-color
+    opacity: 0
+    transition: $app-transition
+    transition-delay: 0.5s
+  &__link._active
+    opacity: 1
+    &:hover
+      opacity: 0.5

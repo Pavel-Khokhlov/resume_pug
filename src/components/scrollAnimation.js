@@ -6,7 +6,7 @@ function scrollAnimation() {
   animationItems.forEach((el) => {
     const itemHeight = el.offsetHeight;
     const itemOffset = el.offsetTop;
-    const animationStart = 2;
+    const animationStart = 4;
     // define the start point of animation
     let animationItemPoint = window.innerHeight - itemHeight / animationStart;
     if (itemHeight > window.innerHeight) {

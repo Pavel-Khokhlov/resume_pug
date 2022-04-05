@@ -1,6 +1,9 @@
+- var downloadCV = "https://www.dropbox.com/s/tgexysz842pju44/Pavel%20Khokhlov-%20%20Frontend.pdf?dl=0"
+
 section(id="promo").section.promo
   .promo__text
     h1.title.title__promo.animation_item.stop_animation=profile.name
-    div.promo__line
+    span.promo__line
     h3.title.subtitle__promo.animation_item.stop_animation=profile.about
+    a.promo__link.animation_item.stop_animation(href= downloadCV, target="_blank") Download CV
   include ../social/social
