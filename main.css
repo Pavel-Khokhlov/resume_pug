@@ -57,6 +57,8 @@
 
 .subtitle__promo {
   position: relative;
+  width: 100%;
+  text-align: center;
   top: 100px;
   opacity: 0;
   font-size: min(50px, 7vw);
@@ -436,7 +438,6 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  text-align: center;
 }
 .promo__line {
   width: 30vw;
@@ -447,7 +448,8 @@
 }
 .promo__link {
   text-decoration: none;
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
   color: white;
   border: 1px red solid;
   opacity: 0;
