@@ -60,6 +60,7 @@
   top: 100px;
   opacity: 0;
   font-size: min(50px, 7vw);
+  border: 1px red solid;
   color: rgba(116, 255, 255, 0.6);
   transition: all 1s ease;
 }
