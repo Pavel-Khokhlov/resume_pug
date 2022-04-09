@@ -447,6 +447,7 @@
 .promo__link {
   text-decoration: none;
   color: white;
+  border: 1px red solid;
   opacity: 0;
   transition: all 0.5s ease;
 }
