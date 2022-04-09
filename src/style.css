@@ -9,6 +9,8 @@
 }
 .title__promo {
   position: relative;
+  width: 100%;
+  height: min(100px, 20vw);
   margin-top: min(210px, 50vw);
   font-size: min(70px, 10vw);
   opacity: 0;
@@ -48,6 +50,8 @@
 
 .subtitle__promo {
   position: relative;
+  width: 100%;
+  text-align: center;
   top: 100px;
   opacity: 0;
   font-size: min(50px, 7vw);
@@ -436,12 +440,13 @@
 }
 .promo__link {
   text-decoration: none;
+  width: 100%;
+  text-align: center;
   color: white;
   opacity: 0;
   transition: all 0.5s ease;
 }
 .promo__link._active {
-  transition-delay: 0.5s;
   opacity: 1;
 }
 .promo__link._active:hover {

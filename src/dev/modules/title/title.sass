@@ -7,16 +7,18 @@
     weight: 300
   &__promo
     position: relative
+    width: 100%
+    height: min(100px, 20vw)
     margin-top: min(210px, 50vw)
     font-size: min((calc($text-size-title-base) * 14), 10vw)
     opacity: 0
     filter: blur(6px)
     transform: scale(0.2)
     transition: $animation-transition
-  &__promo._active
-    filter: none
-    transform: scale(1)
-    opacity: 1
+    &._active
+      filter: none
+      transform: scale(1)
+      opacity: 1
 
   &__main
     position: relative
@@ -36,13 +38,15 @@
       height: 2px
       box-shadow: shadow_button($primary-black, $primary-color)
       background: linear-gradient(to right, rgba($third-color, 1),rgba($third-color, 0))
-  &__main._active
-    left: 0
-    opacity: 1
+    &._active
+      left: 0
+      opacity: 1
 
 .subtitle
   &__promo
     position: relative
+    width: 100%
+    text-align: center
     top: 100px
     opacity: 0
     font-size: min(50px, 7vw)

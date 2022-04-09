@@ -17,11 +17,12 @@
 
   &__link
     text-decoration: none
+    width: 100%
+    text-align: center
     color: $primary-color
     opacity: 0
     transition: $app-transition
-  &__link._active
-    transition-delay: 0.5s
-    opacity: 1
-    &:hover
-      opacity: 0.5
+    &._active
+      opacity: 1
+      &:hover
+        opacity: 0.5
