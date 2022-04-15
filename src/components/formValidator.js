@@ -6,7 +6,7 @@ import {
   resetButton,
   active,
 } from "../utils/constants.js";
-import { REG_PHONE } from "../utils/parameters.js";
+import { REG_NAME, REG_EMAIL, REG_PHONE } from "../utils/parameters.js";
 
 export default class FormValidator {
   constructor(formSelector) {
@@ -21,7 +21,7 @@ export default class FormValidator {
     this._inputArray = this._formElement.querySelectorAll(this._inputSelector);
     this._submitBtn = this._formElement.querySelector(this._submitButton);
     this._resetBtn = this._formElement.querySelector(this._resetButton);
-    this._errorMessage = { name: null, phone: null, message: null };
+    this._errorMessage = { name: null, contact: null, message: null };
   }
 
   // Fn to hide error message
@@ -46,7 +46,7 @@ export default class FormValidator {
       this._resetBtn.classList.add(this._active);
 
     this._errorMessage.name === "" &&
-    this._errorMessage.phone === "" &&
+    this._errorMessage.contact === "" &&
     this._errorMessage.message === ""
       ? this._submitBtn.classList.add(this._active)
       : this._submitBtn.classList.remove(this._active);
@@ -55,35 +55,30 @@ export default class FormValidator {
   // Функция проверки ввода на ошибку
   _checkInputValidity(inputElement) {
     if (inputElement.name === "name") {
-      if (inputElement.value.length === 0) {
-        return "Name is required";
-      }
-      if (inputElement.value.length < 2) {
+      if (inputElement.value.length === 0) return "Name is required";
+      if (!REG_NAME.test(inputElement.value))
+        return "Enter only letters, space or -, _.";
+      if (inputElement.value.length < 2)
         return "Name must be more than 2 characters";
-      }
       return "";
     }
-    
-    if (inputElement.name === "phone") {
-      if (inputElement.value.length === 0) {
-        return "Phone is required";
-      }
-      if (inputElement.value.length < 10) {
-        return "Phone must be more than 10 numbers";
-      }
-      if (!REG_PHONE.test(inputElement.value)) {
-        return "Enter correct phone";
-      }
+
+    if (inputElement.name === "contact") {
+      if (inputElement.value.length === 0) return "Phone or e-mail is required";
+      if (
+        !(
+          REG_PHONE.test(inputElement.value) ||
+          REG_EMAIL.test(inputElement.value)
+        )
+      )
+        return "Enter correct phone or e-mail";
       return "";
     }
 
     if (inputElement.name === "message") {
-      if (inputElement.value.length === 0) {
-        return "Message is required";
-      }
-      if (inputElement.value.length < 10) {
+      if (inputElement.value.length === 0) return "Message is required";
+      if (inputElement.value.length < 10)
         return "Name must be more than 10 characters";
-      }
       return "";
     }
   }
@@ -92,7 +87,7 @@ export default class FormValidator {
     this._formElement.reset();
     this._resetBtn.classList.remove(this._active);
     this._submitBtn.classList.remove(this._active);
-    this._errorMessage = { name: null, phone: null, message: null };
+    this._errorMessage = { name: null, contact: null, message: null };
     this._eraseInputError();
   }
 

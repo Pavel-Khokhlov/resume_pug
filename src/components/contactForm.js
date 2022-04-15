@@ -1,9 +1,6 @@
 import {
   contactFormSelector,
   inputSelector,
-  nameInput,
-  phoneInput,
-  messageInput,
   resetButton,
 } from "../utils/constants.js";
 
@@ -12,19 +9,20 @@ export default class contactForm {
     this._form = document.querySelector(contactFormSelector);
     this._handleFormSubmit = handleFormSubmit;
     this._inputList = this._form.querySelectorAll(inputSelector);
-    this._nameInput = nameInput;
-    this._phoneInput = phoneInput;
-    this._messageInput = messageInput;
     this._resetBtn = document.querySelector(resetButton);
   }
 
   _getInputValues() {
     this._formValues = {};
 
-    this._inputList.forEach(
-      (input) => (this._formValues[input.name] = input.value)
-    );
-    
+    this._inputList.forEach((input) => {
+      let value = input.value;
+      input.name !== "name"
+        ? (this._formValues[input.name] = value)
+        : (this._formValues[input.name] =
+            value.charAt(0).toUpperCase() + value.slice(1)); // set first letter to uppercase
+    });
+
     return this._formValues;
   }
 

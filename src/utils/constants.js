@@ -16,9 +16,6 @@ export const errorSelector = ".form__error";
 export const inputElement = document.querySelector(".input");
 export const submitButton = ".button__submit";
 export const resetButton = ".button__reset";
-export const nameInput = document.querySelector(".form__input_name");
-export const phoneInput = document.querySelector(".form__input_phone");
-export const messageInput = document.querySelector(".form__input_message");
 
 // ANIMATION ITEMS
 export const animationItems = document.querySelectorAll(".animation_item");
