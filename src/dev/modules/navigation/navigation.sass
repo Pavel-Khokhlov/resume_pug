@@ -38,6 +38,7 @@
     flex-direction: row
     gap: min(40px, 5vw)
   &__link
+    @include deny-copy-text
     @include link
     font-size: 18px
     color: $primary-color
@@ -52,11 +53,13 @@
     @media screen and (max-width: 600px)
       flex-direction: column
   &__link
+    @include deny-copy-text
     @include link
     font-size: min(18px, 4vw)
     color: rgba($primary-color, 0.6)
 
 .nav-menu
+  @include deny-copy-text
   display: block
   &__list
     @include list

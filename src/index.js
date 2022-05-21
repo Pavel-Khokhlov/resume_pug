@@ -1,5 +1,6 @@
-import _ from 'lodash';
+import 'normalize.css/normalize.css';
 import './dev/index.sass';
+import { onDocumentReady, importAll } from './function';
 import Api from "./components/api.js";
 import FormValidator from "./components/formValidator.js";
 import scrollAnimation from "./components/scrollAnimation.js";
@@ -21,6 +22,20 @@ import {
 
 import PopupWithMenu from "./components/popupWithMenu.js";
 import contactForm from "./components/contactForm.js";
+
+// import all media from public
+importAll(
+  require.context(
+    './dev/images',
+    true,
+    /\.(png|svg|jpg|jpe?g|gif|mov|mp4|ico|webmanifest|xml)$/
+  )
+)
+
+onDocumentReady(function () {
+  console.log('hello friend.')
+})
+
 
 const catchErr = (res) => {
   alert(`Server error: ${res.status}`);

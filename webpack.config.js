@@ -1,33 +1,37 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+let mode = "development";
+if (process.env.NODE_ENV === "production") {
+  mode = "production";
+}
+
+console.log(mode + ' mode');
 
 module.exports = {
-  mode: 'development',
-  entry: "./src/index.js",
+  mode: mode,
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: "",
+    filename: '[name].[hash].js',
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      filename: 'index.html',
+      template: "./src/dev/layout/index.pug",
       inject: 'body', // put script to body lacation
       scriptLoading: "blocking", // defer off
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
+    new CleanWebpackPlugin(),
   ],
-  output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "",
-  },
   module: {
     rules: [
-      {
-        test: /\.html$/i,
-        use: ["html-loader"],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader",],
-      },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -40,13 +44,51 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.html$/i,
+        use: ["html-loader"],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        test: /\.pug$/,
+        loader: '@webdiscus/pug-loader',
       },
-    ],
+      {
+        test: /\.(sass|scss|css)$/,
+        use: [
+          mode === "development" ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  'postcss-preset-env',
+                  {
+                    // options
+                  },
+                ],
+              },
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]'
+        } 
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[hash][ext]'
+        } 
+      },
+    ]
   },
-};
+  stats: {
+    children: true,
+  },
+}
