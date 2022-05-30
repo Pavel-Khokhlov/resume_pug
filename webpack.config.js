@@ -18,18 +18,11 @@ module.exports = {
     publicPath: "",
     filename: '[name].[hash].js',
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: "./src/dev/layout/index.pug",
-      inject: 'body', // put script to body lacation
-      scriptLoading: "blocking", // defer off
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-    }),
-    new CleanWebpackPlugin(),
-  ],
+  devServer: {
+    port: 5001,
+    hot: true,
+    static: './dist'
+  },
   module: {
     rules: [
       {
@@ -91,4 +84,16 @@ module.exports = {
   stats: {
     children: true,
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: "./src/dev/layout/index.pug",
+      inject: 'body', // put script to body lacation
+      scriptLoading: "blocking", // defer off
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
+    new CleanWebpackPlugin(),
+  ],
 }

@@ -22,8 +22,9 @@ import {
 
 import PopupWithMenu from "./components/popupWithMenu.js";
 import contactForm from "./components/contactForm.js";
+import { getScrollPosition } from './components/scrolling';
 
-// import all media from public
+// import all media from src/dev/images
 importAll(
   require.context(
     './dev/images',
@@ -35,7 +36,6 @@ importAll(
 onDocumentReady(function () {
   console.log('hello friend.')
 })
-
 
 const catchErr = (res) => {
   alert(`Server error: ${res.status}`);
@@ -71,10 +71,6 @@ function handleLinkClick(e) {
     behavior: "smooth",
   });
 }
-
-// define all links on the page and set listeners
-const navLinks = document.querySelectorAll(".nav__link");
-navLinks.forEach((link) => link.addEventListener("click", handleLinkClick));
 
 // HANDLER FORM
 const formContact = new contactForm({
@@ -118,3 +114,8 @@ if (animationItems.length > 0) {
 
 // define listener for button menu
 btnMenu.addEventListener("click", handleMenuClick);
+// define all links on the page and set listeners
+const navLinks = document.querySelectorAll(".nav__link");
+navLinks.forEach((link) => link.addEventListener("click", handleLinkClick));
+
+window.addEventListener('scroll', getScrollPosition);

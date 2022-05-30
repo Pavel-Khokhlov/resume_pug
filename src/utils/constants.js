@@ -19,4 +19,5 @@ export const resetButton = ".button__reset";
 
 // ANIMATION ITEMS
 export const animationItems = document.querySelectorAll(".animation_item");
+export const scrollIndicator = document.querySelector('.scroll-indicator');
 
