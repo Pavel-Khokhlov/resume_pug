@@ -16,7 +16,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: "",
-    filename: '[name].[hash].js',
+    filename: '[name].[fullhash].js',
   },
   devServer: {
     port: 5001,
@@ -76,7 +76,7 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[hash][ext]'
+          filename: 'assets/fonts/[fullhash][ext]'
         } 
       },
     ]
