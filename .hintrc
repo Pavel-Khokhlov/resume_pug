@@ -17,6 +17,19 @@
           "textarea[placeholder]"
         ]
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "justify-content",
+          "align-items",
+          "flex",
+          "transition",
+          "flex-direction",
+          "gap"
+        ]
+      }
     ]
   }
 }
