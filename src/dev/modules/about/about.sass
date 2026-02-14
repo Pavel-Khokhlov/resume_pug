@@ -4,7 +4,9 @@
     width: min(900px, 80vw)
     margin: 0 auto
   &__education
+    display: -ms-grid
     display: grid
+    -ms-grid-columns: 2.5fr min(100px, 8vw) 1fr
     grid-template-columns: 2.5fr 1fr
     gap: min(100px, 8vw)
     margin-bottom: min(100px, 16vw)
@@ -18,12 +20,14 @@
     gap: min(20px, 4vw)
   &__image
     position: relative
+    -ms-transform: scale(0.5)
     transform: scale(0.5)
     width: 100%
     border-radius: 10px
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.04), 4px 4px 8px rgba(0, 0, 0, 0.06), 6px 6px 15px rgba(0, 0, 0, 0.08), 7px 7px 25px rgba(0, 0, 0, 0.1)
     transition: $animation-transition
     &._active
+      -ms-transform: scale(1)
       transform: scale(1)
     @media screen and (max-width: 767px)
       width: min(250px, 60vw)
@@ -41,7 +45,9 @@
     padding: 10px 15px
     border: 1px solid rgba($primary-color, 0.1)
     background: rgba($primary-color, 0.025)
+    display: -ms-grid
     display: grid
+    -ms-grid-columns: 1fr 10px 2fr
     grid-template-columns: 1fr 2fr
     transition: $app-transition 0.5s
     @media screen and (max-width: 767px)
@@ -55,5 +61,5 @@
     margin-top: min(40px, 10vw)
     display: flex
     flex-direction: column
-    gap: min(40px, 10vw)
+    gap: min(20px, 10vw)
   

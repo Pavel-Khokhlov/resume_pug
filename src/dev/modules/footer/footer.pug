@@ -1,4 +1,5 @@
 footer.section.footer
   include ../navigation/nav-footer
   include ../social/social
-  p.paragraph.footer__paragraph @ Created by Pavel Khokhlov
+  p.paragraph.footer__paragraph @ Created by #{pkg.author || 'Pavel Khokhlov'}
+  p.paragraph.footer__paragraph Version: #{pkg.version}
