@@ -4,7 +4,12 @@ section(id="skills").section.skills
     h4.title.subtitle__main.skills__subtitle Technologies
     .skills__items
       for i in skills
-        p.skills__item= i
+        a.skills__item(
+          href=i.link ? i.link : '#'
+          class=i.link ? '' : 'is-disabled'
+          target=i.link ? '_blank' : null
+          rel=i.link ? 'noopener noreferrer' : null
+        )= i.name ? i.name : i
     h4.title.subtitle__main.skills__subtitle Tools
     .skills__items
       for i in tools

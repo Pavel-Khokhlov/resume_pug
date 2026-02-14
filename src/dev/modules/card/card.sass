@@ -1,5 +1,6 @@
 .card
   position: relative
+  -ms-transform: translate(0, 50%)
   transform: translate(0, 50%)
   opacity: 0
   width: 100%
@@ -12,8 +13,12 @@
   box-sizing: border-box
   box-shadow: shadow_box($primary_black, $secondary-color)
   transition: $animation-transition
+  &:hover
+    -ms-transform: translate(0, 50%) scale(1.1)
+    transform: translate(0, 50%) scale(1.1)
   @media screen and (max-width: 767px)
     opacity: 0
+    -ms-transform: translate(-120%, 0)
     transform: translate(-120%, 0)
   &__title
     text-align: center
@@ -34,5 +39,9 @@
       opacity: 1
 
   &._active
+    -ms-transform: translate(0, 0)
     transform: translate(0, 0)
     opacity: 1
+    &:hover
+      -ms-transform: translate(0, 0) scale(1.05)
+      transform: translate(0, 0) scale(1.05)
